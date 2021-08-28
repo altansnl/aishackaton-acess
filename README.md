@@ -1,4 +1,5 @@
-# aishackaton-acess
+# AIS Hackathon 2021 - Team ACESS
+## Altan, Christos, Ernest, Simon, Simone
 
 - Data used: [Drive Link](https://drive.google.com/drive/u/0/folders/189dPK7T-AUUEThUyyZqxNxTOahvL81aL) (taken from https://scitldr.apps.allenai.org/).  
 - Model used: T5 Transformer Network, available through the [HuggingFace API](https://huggingface.co/t5-small).
