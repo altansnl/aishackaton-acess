@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <script charset="utf-8" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script charset="utf-8" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    <script charset="utf-8" src="static/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div class="col text-center pt-5 mt-5" id="title-wrapper">
+        <h1 class="display-1">ACESScan<i class="fab fa-searchengin"></i></h1>
+    </div>
+
+    <div class="d-flex  justify-content-center m-2 p-3" id="upload-wrapper">
+
+        <button type="button" class="btn rounded-pill border border-white" id="upload-paper-btn">Upload paper</button>
+
+        <div style="display: none;" id="upload-form-wrapper">
+        <form action = "/success" method = "post" enctype="multipart/form-data" id="upload-paper-form">
+            <input type="file" name="file" class="form-control-file" id="file_input">
+        </form>
+        </div>
+    </div>
+
+    <div id="loading-spinner" style="display: none;">
+    <div class="d-flex justify-content-center" >
+        <div class="spinner-border text-light " role="status">
+            <span class="sr-only"></span>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+	<title>Ladok - start</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="static-2b7f9789aa6df8713bfae59cf3e467a8/styles.css"/>
+	<link rel="icon" href="static-2b7f9789aa6df8713bfae59cf3e467a8/img/favicon-ladok.png" type="image/png"/>
+	<style>
+		.knappikon {
+			max-width: 100%;
+			height: 30px;
+			width: auto;
+			padding-right: 5px;
+		}
+
+		.ml-10 {
+			margin-left: 10px;
+		}
+
+		.mt-20 {
+			margin-top: 20px;
+		}
+
+		#seamlessaccessButton {
+			overflow: hidden;
+		}
+	</style>
+	<script src="https://service.seamlessaccess.org/thiss.js"></script>
+	<script>
+		window.onload = function () {
+			// Render the SeamlessAccess button
+			thiss.DiscoveryComponent.render({
+				color: '#2E79B9',
+				backgroundColor: '#E9ECEF',
+				dimensions: {
+					width: '320px',
+					height: '100px'
+				},
+				loginInitiatorURL: 'https://www.student.ladok.se/Shibboleth.sso/Login?target=https://www.student.ladok.se/student/shiblogin',
+			}, '#seamlessaccessButton');
+		};
+	</script>
+</head>
+<body class="login-body">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="jumbotron">
+				<h1 class="login-title">Välkommen till Ladok för studenter</h1>
+				<h2 class="login-title_alt">Welcome to Ladok for students</h2>
+
+				<p>Ladok - start</p>
+
+				<p><b>Inloggning</b></br>
+					Login
+				</p>
+				<div class="row">
+					<div class="col-xs-6 ml-10">
+						<div id='seamlessaccessButton'></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<a href="shiblogin" class="btn btn-large btn-primary btn-block text-left">
+							<img class="knappbild" alt="Lärosäte" src="static-2b7f9789aa6df8713bfae59cf3e467a8/img/larosate.svg">Välj
+							lärosäte / Choose university</a>
+					</div>
+				</div>
+				<p class="mt-20">
+					<b>Inloggning till lärosäten som inte använder studentkonton:</b></br>
+					Log in to universities that don’t provide student accounts:
+				</p>
+				<div class="row">
+					<div class="col-sm-5">
+						<a href="https://www.student.ladok.se/Shibboleth.sso/Login?entityID=https://login.idp.eduid.se/idp.xml&target=https://www.student.ladok.se/student/shiblogin"
+						   class="btn btn-large btn-primary btn-block text-left">
+							<img class="knappikon" alt="eduID" src="static-2b7f9789aa6df8713bfae59cf3e467a8/img/eduid.svg">
+							eduID</a>
+
+
+						<a href="https://www.student.ladok.se/Shibboleth.sso/Login?entityID=https://idp.antagning.se/aws-idp&target=https://www.student.ladok.se/student/shiblogin"
+						   class="btn btn-large btn-primary btn-block text-left">
+							<img class="knappikon" alt="Antagning.se" src="static-2b7f9789aa6df8713bfae59cf3e467a8/img/antagning.svg">
+							Antagning.se
+							/
+							Universityadmissions.se</a>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
